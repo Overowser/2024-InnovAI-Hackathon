@@ -17,6 +17,8 @@
   <link href="/assets/css/nucleo-svg.css" rel="stylesheet" />
   <!-- CSS Files -->
   <link id="pagestyle" href="/assets/css/argon-dashboard.css?v=2.0.4" rel="stylesheet" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=picture_as_pdf" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
   <style>
      #iframe-container,
@@ -67,75 +69,19 @@ tr:hover {
     background-color: #ddd;
 }
 
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
   </style>
 </head>
 
 <body class="g-sidenav-show   bg-gray-100">
   <div class="min-height-300 bg-primary position-absolute w-100"></div>
-  <aside class="sidenav bg-white navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-4 " id="sidenav-main">
-    <div class="sidenav-header">
-      <i class="fas fa-times p-3 cursor-pointer text-secondary opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
-      <a class="navbar-brand m-0" href=" ">
-        <img src="/assets/img/logos/vulneraScan_logo.png" class="navbar-brand-img h-100" alt="main_logo">
-        <span class="ms-1 font-weight-bold">TawarAI</span>
-      </a>
-    </div>
-    <hr class="horizontal dark mt-0">
-    <div class="collapse navbar-collapse  w-auto " id="sidenav-collapse-main">
-  
-      <ul class="navbar-nav">
-        <!-- dashboard section list -->
-        <!-- <li class="nav-item">
-          <a class="nav-link" href="dashboard1.php">
-            <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
-              <i class="ni ni-tv-2 text-primary text-sm opacity-10"></i>
-            </div>
-            <span class="nav-link-text ms-1">Accueil</span>
-          </a>
-        </li> -->
-        <!-- historique section list -->
-        <li class="nav-item">
-          <a class="nav-link active" href=" ">
-            <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
-                <i class="fa-regular fa-hospital"></i>
-            </div>
-            <span class="nav-link-text ms-1">Patient</span>
-          </a>
-        </li>
-        <!-- Scan section list -->
-        <!-- <li class="nav-item">
-          <a class="nav-link " href="scan.php">
-            <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
-              <i class="ni ni-credit-card text-success text-sm opacity-10"></i>
-            </div>
-            <span class="nav-link-text ms-1">Scan</span>
-          </a>
-        </li> -->
-        <!-- Logout -->
-        <li class="nav-item">
-          <a class="nav-link " href=" ">
-            <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
-            <i class="ni ni-single-02 text-dark text-sm opacity-10"></i>
-            </div>
-            <span class="nav-link-text ms-1">Logout</span>
-          </a>
-        </li>
-      </ul>
-    </div>
-    <div class="sidenav-footer mx-3 ">
-      <div class="card card-plain shadow-none" id="sidenavCard">
-        <img class="w-50 mx-auto" src="/assets/img/illustrations/icon-documentation.svg" alt="sidebar_illustration">
-        <div class="card-body text-center p-3 w-100 pt-0">
-          <div class="docs-info">
-            <h6 class="mb-0">Besoin d'aide?</h6>
-            <p class="text-xs font-weight-bold mb-0">Veuillez consulter nos documents</p>
-          </div>
-        </div>
-      </div>
-      <a href=" " target="_blank" class="btn btn-dark btn-sm w-100 mb-3">Documentation</a>
-      <a class="btn btn-primary btn-sm mb-0 w-100" href="" type="button">Contactez nous</a>
-    </div>
-  </aside>
+
   <main class="main-content position-relative border-radius-lg ">
     <!-- Navbar -->
     <nav class="navbar navbar-main navbar-expand-lg px-0 mx-4 shadow-none border-radius-xl " id="navbarBlur" data-scroll="false">
@@ -153,28 +99,6 @@ tr:hover {
                  <div id="weatherInfo" class="weather-info d-flex align-items-center"></div>
              </div>
          </div>
-          <ul class="navbar-nav  justify-content-end">
-            <li class="nav-item d-flex align-items-center">
-              <a class="nav-link text-white font-weight-bold px-0" href="">
-                 <i class="fa fa-user me-sm-1"></i>
-                 <span class="d-sm-inline d-none">Logout</span>
-              </a>
-            </li>
-            <li class="nav-item d-xl-none ps-3 d-flex align-items-center">
-              <a href="javascript:;" class="nav-link text-white p-0" id="iconNavbarSidenav">
-                <div class="sidenav-toggler-inner">
-                  <i class="sidenav-toggler-line bg-white"></i>
-                  <i class="sidenav-toggler-line bg-white"></i>
-                  <i class="sidenav-toggler-line bg-white"></i>
-                </div>
-              </a>
-            </li>
-            <li class="nav-item px-3 d-flex align-items-center">
-              <a href="javascript:;" class="nav-link text-white p-0">
-                <i class="fa fa-cog fixed-plugin-button-nav cursor-pointer"></i>
-              </a>
-            </li>
-          </ul>
         </div>
       </div>
     </nav>
@@ -185,52 +109,89 @@ tr:hover {
       <div class="col-lg-12"> <!-- Adjust column size as needed -->
       <div class="card">
         <div class="card-body">
-
           {% if error %}
-              <div class="alert alert-danger">
-                  <strong>Error:</strong> {{ error }}
-              </div>
-          {% endif %}
+        <div class="alert alert-danger">
+          <strong>Error:</strong> {{ error }}
+        </div>
+      {% endif %}
+
   
-          {% if report %}
-              <div class="report-content">
-                  <!-- The generated report will be inserted here -->
-                  {{ report|safe }}
-              </div>
+      {% if report_string %}
+      <div class="section">
+        <h2>Patient Details</h2>
+        <p><strong>Gender:</strong> {{ report_string['gender'] }}</p>
+        <p><strong>Age:</strong> {{ report_string['age'] }}</p>
+        <p><strong>Weight:</strong> {{ report_string['weight'] }} kg</p>
+        <p><strong>Height:</strong> {{ report_string['height'] }} m</p>
+        <p><strong>BMI:</strong> {{ report_string['bmi'] }}</p>
+      </div>
+      <div class="section">
+        <h2>Vital Signs</h2>
+        <table>
+          <tr><th>Heart Rate (bpm)</th><td>{{ report_string['vital_signs']['heart_rate'] }}</td></tr>
+          <tr><th>Respiratory Rate (bpm)</th><td>{{ report_string['vital_signs']['respiratory_rate'] }}</td></tr>
+          <tr><th>Body Temperature (°C)</th><td>{{ report_string['vital_signs']['body_temp'] }}</td></tr>
+          <tr><th>Oxygen Saturation (%)</th><td>{{ report_string['vital_signs']['oxygen_saturation'] }}</td></tr>
+          <tr><th>Systolic BP (mmHg)</th><td>{{ report_string['vital_signs']['systolic_bp'] }}</td></tr>
+          <tr><th>Diastolic BP (mmHg)</th><td>{{ report_string['vital_signs']['diastolic_bp'] }}</td></tr>
+          <tr><th>Pulse Pressure (mmHg)</th><td>{{ report_string['vital_signs']['pulse_pressure'] }}</td></tr>
+          <tr><th>MAP (mmHg)</th><td>{{ report_string['vital_signs']['map'] }}</td></tr>
+          <tr><th>HRV</th><td>{{ report_string['vital_signs']['hrv'] }}</td></tr>
+        </table>
+      </div>
+      <div class="section">
+        <h2>Diagnosis</h2>
+        <p>{{ diagnosis }}</p>
+      </div>
+      <div class="section">
+        <h2>Recommendations</h2>
+        <p>{{ recommendations }}</p>
+      </div>
+
+      <a href="/generate_pdf/{{ patient_id }}" class="btn btn-primary d-inline-flex align-items-center">
+        <span class="material-symbols-outlined me-2">
+            picture_as_pdf
+        </span>
+        PDF
+    </a>
+      {% endif %}      
   
-              <a href="/generate_pdf/{{ patient_id }}" class="btn btn-link text-dark text-sm mb-0 px-0 ms-4"><i class='fas fa-file-pdf text-lg me-1'></i> PDF</a>
-          {% endif %}
-  
-          {% if show_patient_list %}
-              <h2>Select a Patient to View Report</h2>
-              <table>
-                  <thead>
-                      <tr>
-                          <th>Patient ID</th>
-                          <th>Action</th>
-                          <th>Generate PDF</th>
-                      </tr>
-                  </thead>
-                  <tbody>
-                      {% for patient in patients.itertuples() %}
-                          <tr>
-                              <td>{{ patient._1 }}</td>
-                              <td><a href="/patient/{{ patient._1 }}" class="btn">View Report</a></td>
-                              <td><a href="/generate_pdf/{{ patient._1 }}" class="btn">Generate PDF</a></td>
-                          </tr>
-                      {% endfor %}
-                  </tbody>
-              </table>
-  
-              <div class="pagination">
-                  {% if page > 1 %}
-                      <a href="/?page={{ page - 1 }}">Previous</a>
-                  {% endif %}
-                  {% if page < total_pages %}
-                      <a href="/?page={{ page + 1 }}">Next</a>
-                  {% endif %}
-              </div>
-          {% endif %}
+      
+  <div class="pagination">
+    {% if request.path != '/patient/' ~ patient_id %}
+        <!-- Table for patient list with pagination -->
+<div class="container">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Patient ID</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for patient in patients %}
+        <tr>
+          <td>{{ patient }}</td>
+          <td>
+            <a href="{{ url_for('patient_report', patient_id=patient) }}" class="btn btn-primary">View Report</a>
+          </td>
+          <td>
+          <a href="{{ url_for('generate_pdf', patient_id=patient) }}" class="btn btn-secondary">Generate PDF</a>
+          </td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+      {% if page > 1 %}
+        <a class="btn btn-primary me-4 mt-3" href="/?page={{ page - 1 }}">Previous</a>
+      {% endif %}
+      {% if page < total_pages %}
+        <a class="btn btn-primary mt-3" href="/?page={{ page + 1 }}">Next</a>
+      {% endif %}
+    {% endif %}
+    
+  </div>
+</div>
         </div>
       </div>
     </div>
@@ -359,42 +320,42 @@ tr:hover {
     
     // Function to display weather data
     function displayWeather(data) {
-      const { name, main, weather } = data;
-      const weatherIcon = getWeatherIcon(weather[0].icon);
-      weatherInfo.innerHTML = `
-        <i class="fas fa-map-marker-alt"></i>
+    const { name, main, weather } = data;
+    const weatherIcon = getWeatherIcon(weather[0].icon);
+    weatherInfo.innerHTML = `
+        <i class="material-icons">location_on</i>
         <h4>${name}</h4>
         ${weatherIcon}
         <p>${weather[0].description}</p>
-        <i class="fas fa-thermometer-half"></i>
+        <i class="material-icons">thermostat</i>
         <p>${main.temp} °C</p>
-        <i class="fas fa-tint"></i>
+        <i class="material-icons">water_drop</i>
         <p>${main.humidity}%</p>
-      `;
-    }
+    `;
+}
 
     // Function to get weather icon based on weather condition code
     function getWeatherIcon(iconCode) {
       // Map weather condition codes to corresponding Font Awesome icons
       const iconMap = {
-        '01d': '<i class="fas fa-sun"></i>',  // clear sky day
-        '01n': '<i class="fas fa-moon"></i>',  // clear sky night
-        '02d': '<i class="fas fa-cloud-sun"></i>',  // few clouds day
-        '02n': '<i class="fas fa-cloud-moon"></i>',  // few clouds night
-        '03d': '<i class="fas fa-cloud"></i>',  // scattered clouds day
-        '03n': '<i class="fas fa-cloud"></i>',  // scattered clouds night
-        '04d': '<i class="fas fa-cloud"></i>',  // broken clouds day
-        '04n': '<i class="fas fa-cloud"></i>',  // broken clouds night
-        '09d': '<i class="fas fa-cloud-showers-heavy"></i>',  // shower rain day
-        '09n': '<i class="fas fa-cloud-showers-heavy"></i>',  // shower rain night
-        '10d': '<i class="fas fa-cloud-sun-rain"></i>',  // rain day
-        '10n': '<i class="fas fa-cloud-moon-rain"></i>',  // rain night
-        '11d': '<i class="fas fa-bolt"></i>',  // thunderstorm day
-        '11n': '<i class="fas fa-bolt"></i>',  // thunderstorm night
-        '13d': '<i class="fas fa-snowflake"></i>',  // snow day
-        '13n': '<i class="fas fa-snowflake"></i>',  // snow night
-        '50d': '<i class="fas fa-smog"></i>',  // mist day
-        '50n': '<i class="fas fa-smog"></i>'   // mist night
+        '01d': '<i class="material-icons">wb_sunny</i>',  // clear sky day
+'01n': '<i class="material-icons">nights_stay</i>',  // clear sky night
+'02d': '<i class="material-icons">cloud_queue</i>',  // few clouds day
+'02n': '<i class="material-icons">cloud</i>',  // few clouds night
+'03d': '<i class="material-icons">cloud</i>',  // scattered clouds day
+'03n': '<i class="material-icons">cloud</i>',  // scattered clouds night
+'04d': '<i class="material-icons">cloud</i>',  // broken clouds day
+'04n': '<i class="material-icons">cloud</i>',  // broken clouds night
+'09d': '<i class="material-icons">grain</i>',  // shower rain day
+'09n': '<i class="material-icons">grain</i>',  // shower rain night
+'10d': '<i class="material-icons">cloud_done</i>',  // rain day
+'10n': '<i class="material-icons">cloud_off</i>',  // rain night
+'11d': '<i class="material-icons">flash_on</i>',  // thunderstorm day
+'11n': '<i class="material-icons">flash_on</i>',  // thunderstorm night
+'13d': '<i class="material-icons">ac_unit</i>',  // snow day
+'13n': '<i class="material-icons">ac_unit</i>',  // snow night
+'50d': '<i class="material-icons">filter_drama</i>',  // mist day
+'50n': '<i class="material-icons">filter_drama</i>'   // mist night
       };
       return iconMap[iconCode];
     }
