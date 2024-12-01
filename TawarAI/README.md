@@ -168,7 +168,9 @@ Access the app at http://127.0.0.1:5000.
 
 ###**Authors**
 FullStack by [Aicha Lahnite]
-
+[Farid Dinar]
+[Mohamed El Ghali BENABOU]
+[Imad Zehnouni]
 
 ###**License**
 This project is licensed under the MIT License. See the LICENSE file for details.
