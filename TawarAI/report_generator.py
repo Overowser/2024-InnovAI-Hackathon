@@ -3,7 +3,7 @@ from groq import Groq
 import os
 
 # Set up your Groq API key and client
-GROQ_API_KEY = os.environ.get("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")
+GROQ_API_KEY = "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"
 groq_client = Groq(api_key=GROQ_API_KEY)
 
 def parse_patient_data(data):
